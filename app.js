@@ -14,5 +14,5 @@ app.listen(5000,()=>{
 });
 
 app.get('/',function(req,res){
-  return res.render('home/index');
+  return res.render('home/index',{ layout: 'home/index' });
 });
