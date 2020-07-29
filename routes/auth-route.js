@@ -17,6 +17,7 @@ passport.authenticate('google', {
   failureRedirect: '/'
 }));
 router.get('/google/logout',async function(req,res){
+  req.session = null;
   req.logout();
   return res.redirect('/');
 });
